@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<!-- portlet名称 -->
+		<portlet-name>liferay-6.2-ce-ga4-demo</portlet-name>
+		<!-- 显示名称 -->
+		<display-name>Liferay 6.2 Ce Ga4 Demo</display-name>
+		<!-- portlet的实现类 -->
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<!-- 初始化参数，查看模版是view.jsp页面 -->
+		<init-param>
+			<name>view-template</name>
+			<value>/view.jsp</value>
+		</init-param>
+		<!-- portlet输出后的过期时间，单位为秒，-1表明永不过期 -->
+		<expiration-cache>0</expiration-cache>
+		<!-- supports指明了portlet支持的内容类型，所有portlet必须支持视图模式 -->
+		<supports>
+			<!-- MIME类型名称,如"text/html"。MIME类型也可以包含通配符"*"，像"text/*"和"*/*"。 -->
+			<mime-type>text/html</mime-type>
+		</supports>
+		<!-- portlet信息 -->
+		<portlet-info>
+			<!-- 标题 -->
+			<title>Liferay 6.2 Ce Ga4 Demo</title>
+			<!-- 短标题 -->
+			<short-title>Liferay 6.2 Ce Ga4 Demo</short-title>
+			<!-- 关键字 -->
+			<keywords>Liferay 6.2 Ce Ga4 Demo</keywords>
+		</portlet-info>
+		<!-- 包含了在web应用的代码中一个安全角色引用的声明，生命包含了一个可选的描述，在代码中使用的安全角色名称和一个可选的安全角色的连接。如果没有指定安全角色，部署人员必须选择一个适当的安全角色。角色名称元素的值必须是字符串，被用作EJBContext.isCallerInRole(String roleName)和HttpServletRequest.isUserInRole(String role)方法的参数。  -->
+		<security-role-ref>
+			<!-- 安全角色的名称。名称必须符合NMTOKEN词法规则。在portlet这个角色名称必须是惟一的。 -->
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>hello-liferay</portlet-name>
+		<display-name>Hello Liferay</display-name>
+		<portlet-class>
+			com.scaleworld.portlets.HelloLiferayPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/helloliferay/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Hello Liferay</title>
+			<short-title>Hello Liferay</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

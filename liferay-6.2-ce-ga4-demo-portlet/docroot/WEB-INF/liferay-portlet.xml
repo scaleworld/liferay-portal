@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<!-- portlet名称 -->
+		<portlet-name>liferay-6.2-ce-ga4-demo</portlet-name>
+		<!-- portlet图标路径 -->
+		<icon>/icon.png</icon>
+		<!-- 设置相对于portlet上下文将在页头引用的css路径 -->
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<!-- 设置相对于portlet上下文将在页脚引用的javascript路径 -->
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<!-- 设置将被注入到portlet的div中的CSS class名称 -->
+		<css-class-wrapper>liferay-6.2-ce-ga4-demo-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>hello-liferay</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>hello-liferay-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>
